@@ -17,7 +17,7 @@ const ActivityDashboard: React.FC = () => {
     return (
         <Grid>
             <Grid.Column width={10}>
-                    <ActivityList />
+                  <ActivityList />
             </Grid.Column>
             <Grid.Column width={6}>
               <h2>Filters section</h2>
