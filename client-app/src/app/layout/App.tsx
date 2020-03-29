@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, withRouter, RouteComponentProps, Switch } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import { Container } from 'semantic-ui-react';
 import { observer } from 'mobx-react-lite';
 import NavBar from '../../features/nav/NavBar';
@@ -11,6 +12,7 @@ import NotFound from './NotFound';
 
 const App: React.FC<RouteComponentProps> = ({ location }) => (
     <>
+      <ToastContainer position='bottom-right' />
       <Route exact path="/"><Homepage /></Route>
       <Route path={'/(.+)'} render={() => (
         <>
