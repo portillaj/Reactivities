@@ -104,8 +104,8 @@ class ActivityStore {
         let activity = this.getActivity(id);
         if(activity) {
             this.activity = activity;
-        } else {
             this.loadingInitial = true;
+        } else {
             try {
                 activity = await agent.Activities.details(id);
                 runInAction('getting activity', () => {
@@ -116,7 +116,7 @@ class ActivityStore {
                 runInAction('get activity error', () => {
                     this.loadingInitial = false;
                 });
-                console.log(err);
+                console.log('err', err);
             }
         }
     };
