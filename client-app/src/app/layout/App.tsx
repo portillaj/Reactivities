@@ -6,7 +6,7 @@ import { observer } from 'mobx-react-lite';
 import NavBar from '../../features/nav/NavBar';
 import Homepage from '../../features/home/Homepage';
 import ActivityDashboard from '../../features/activities/dashboard/ActivityDashboard';
-import ActivityForm from '../../features/activities/form/ActivityForm';
+import ActivityForm from '../common/form/ActivityForm';
 import ActivityDetails from '../../features/activities/details/ActivityDetails';
 import NotFound from './NotFound';
 
