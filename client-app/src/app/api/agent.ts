@@ -19,6 +19,7 @@ axios.interceptors.response.use(undefined, (error) => {
 	if(status === 500) {
 		toast.error('Sever Error - check the terminal for more info!');
 	}
+	throw error;
 });
 
 const responseBody = (response: AxiosResponse) => response.data;
