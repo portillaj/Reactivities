@@ -24,7 +24,7 @@ namespace Application.User
 
         public class CommandValidator : AbstractValidator<Command>
         {
-            public CommandValidator(UserManager<User> userManager)
+            public CommandValidator(UserManager<AppUser> userManager)
             {
                 RuleFor(x => x.DisplayName).NotEmpty();
                 RuleFor(x => x.Username)

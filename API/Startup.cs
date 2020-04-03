@@ -2,6 +2,7 @@ using System.Text;
 using API.Middleware;
 using Application.Activities;
 using Application.Interfaces;
+using Application.User;
 using Domain;
 using FluentValidation.AspNetCore;
 using Infrastructure.Security;
