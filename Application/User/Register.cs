@@ -1,9 +1,7 @@
-using System.Linq;
-using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
-using Application.Errors;
 using Application.Interfaces;
+using Application.Validators;
 using Domain;
 using FluentValidation;
 using MediatR;
@@ -37,7 +35,7 @@ namespace Application.User
                     .EmailAddress()
                     .MustAsync(async (email, cancellation) => (await userManager.FindByEmailAsync(email)) == null)
                     .WithMessage("Email already exists");
-                RuleFor(x => x.Password).NotEmpty();
+                RuleFor(x => x.Password).Password();
             }
         }
 
