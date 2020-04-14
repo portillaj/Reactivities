@@ -17,7 +17,6 @@ const ActivityListItemAttendees: React.FC<IProps> = ({ attendees }) => {
                             <Image size="mini" circular src={attendee.image || '/assets/user.png'} />
                         }
                        />
-                   <Image size="mini" circular src={attendee.image || '/assets/user.png'} />
                </List.Item>
             ))}
          
