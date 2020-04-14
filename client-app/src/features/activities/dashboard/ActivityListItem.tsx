@@ -3,6 +3,7 @@ import {format } from 'date-fns';
 import { Item, Button, Segment, Icon } from 'semantic-ui-react'
 import { IActivity } from '../../../app/models/activity';
 import { Link } from 'react-router-dom';
+import ActivityListItemAttendees from './ActivityListItemAttendees';
 
 interface IProps {
     activity: IActivity;
@@ -29,7 +30,7 @@ const ActivityListItem: React.FC<IProps> = ({ activity }) => {
                 <Icon name='marker' />{activity.venue}, {activity.city}
             </Segment>
             <Segment secondary>
-                Attendees will go here
+                <ActivityListItemAttendees attendees={activity.attendees}/>
             </Segment>
             <Segment clearing>
                 <span>{activity.description}</span>
