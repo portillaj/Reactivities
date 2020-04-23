@@ -34,6 +34,7 @@ namespace Application.Activities
                 var activity = await _context.Activities
                 .Include(x => x.UserActivities)
                 .ThenInclude(x => x.AppUser)
+                .ThenInclude(x => x.Photos)
                 .Where(x => x.Id == request.Id)
                 .FirstOrDefaultAsync();
                 
