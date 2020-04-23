@@ -11,6 +11,7 @@ interface IProps {
 
 const ActivityListItem: React.FC<IProps> = ({ activity }) => {
     const host = activity.attendees.filter(x => x.isHost)[0];
+    console.log('the host', host);
     return (
         <Segment.Group>
             <Segment>

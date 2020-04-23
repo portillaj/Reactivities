@@ -29,6 +29,7 @@ namespace Application.Activities
                 var activities = await _context.Activities
                 .Include(x => x.UserActivities)
                 .ThenInclude(x => x.AppUser)
+                .ThenInclude(x => x.Photos)
                 .ToListAsync();
                 return _mapper.Map<List<Activity>, List<ActivityDto>>(activities);
             }
