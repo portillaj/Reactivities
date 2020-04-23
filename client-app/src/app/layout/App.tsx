@@ -9,10 +9,10 @@ import ActivityDashboard from '../../features/activities/dashboard/ActivityDashb
 import ActivityForm from '../common/form/ActivityForm';
 import ActivityDetails from '../../features/activities/details/ActivityDetails';
 import NotFound from './NotFound';
-import LoginForm from '../../features/user/LoginForm';
 import { RootStoreContext } from '../stores/rootStore';
 import LoadingComponent from './LoadingComponent';
 import ModalContainer from '../common/modals/ModalContainer';
+import ProfilePage from '../../features/profiles/ProfilePage';
 
 const App: React.FC<RouteComponentProps> = ({ location }) => {
   const rootStore = useContext(RootStoreContext);
@@ -42,7 +42,7 @@ const App: React.FC<RouteComponentProps> = ({ location }) => {
                 <Route exact path="/activities"><ActivityDashboard /></Route>
                 <Route path="/activities/:id"><ActivityDetails /></Route>
                 <Route key={location.key} path={["/createActivity", "/manage/:id"]}><ActivityForm /></Route>
-                <Route path="/login"><LoginForm /></Route>
+                <Route path="/profile/:username"><ProfilePage /></Route>
                 <Route><NotFound /></Route>
               </Switch>
             </Container>
